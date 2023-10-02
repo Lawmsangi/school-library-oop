@@ -82,6 +82,10 @@ Ensure you have the following installed:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
+- **[create_ui]**
+- **[preserve_data]**
+- **[unit_tests]**
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
