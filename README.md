@@ -39,9 +39,9 @@ Ruby
 
 ### Key Features <a name="key-features"></a>
 
-- **[add_student]**
-- **[add_teacher]**
-- **[add_book]**
+- **Add students**
+- **Add teachers**
+- **Add books**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -82,9 +82,9 @@ Ensure you have the following installed:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **[create_ui]**
-- **[preserve_data]**
-- **[unit_tests]**
+- **Create UI**
+- **Preserve data**
+- **Write unit tests**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
