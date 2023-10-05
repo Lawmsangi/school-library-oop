@@ -1,56 +1,5 @@
 require_relative 'app'
 
-def create_person(app)
-  puts "\n"
-  puts 'Do you want to create a student (1) or teacher (2)? [Input number]:'
-  type = gets.chomp.to_i
-  puts 'Enter person age:'
-  age = gets.chomp.to_i
-  puts 'Enter person name:'
-  name = gets.chomp
-  if type == 1
-    puts 'Has parent permission? [Yes/No]'
-    has_parent_permission = gets.chomp
-    app.create_student(age, name, has_parent_permission)
-  elsif type == 2
-    puts 'Enter specialization'
-    specialization = gets.chomp
-    app.create_teacher(age, specialization, name)
-  else
-    puts 'Invalid input'
-  end
-end
-
-def create_book(app)
-  puts "\n"
-  puts 'Enter book title:'
-  title = gets.chomp
-  puts 'Enter book author:'
-  author = gets.chomp
-  app.create_book(title, author)
-end
-
-def create_rental(app)
-  puts "\n"
-  puts 'Enter rental date:'
-  date = gets.chomp
-  app.list_books
-  puts 'Enter book number:'
-  book = gets.chomp.to_i
-  app.list_people
-  puts 'Enter person number:'
-  person = gets.chomp.to_i
-  app.create_rental(date, app.books[book - 1], app.people[person - 1])
-end
-
-def list_rentals(app)
-  puts "\n"
-  app.list_people
-  puts 'Enter person id:'
-  id = gets.chomp.to_i
-  app.list_rentals(id)
-end
-
 def list_options
   puts "\n"
   puts 'Enter number to pick an option:'
@@ -71,10 +20,10 @@ def main
     options = {
       1 => -> { app.list_books },
       2 => -> { app.list_people },
-      3 => -> { create_person(app) },
-      4 => -> { create_book(app) },
-      5 => -> { create_rental(app) },
-      6 => -> { list_rentals(app) },
+      3 => -> { app.create_person },
+      4 => -> { app.create_book },
+      5 => -> { app.create_rental },
+      6 => -> { app.list_rentals },
       7 => -> { exit }
     }
     case option
