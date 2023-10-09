@@ -32,26 +32,27 @@ class App
       end
     end
   end
+
   def create_person()
-  puts "\n"
-  puts 'Do you want to create a student (1) or teacher (2)? [Input number]:'
-  type = gets.chomp.to_i
-  puts 'Enter person age:'
-  age = gets.chomp.to_i
-  puts 'Enter person name:'
-  name = gets.chomp
-  if type == 1
-    puts 'Has parent permission? [Yes/No]'
-    has_parent_permission = gets.chomp
-    create_student(age, name, has_parent_permission)
-  elsif type == 2
-    puts 'Enter specialization'
-    specialization = gets.chomp
-    create_teacher(age, specialization, name)
-  else
-    puts 'Invalid input'
+    puts "\n"
+    puts 'Do you want to create a student (1) or teacher (2)? [Input number]:'
+    type = gets.chomp.to_i
+    puts 'Enter person age:'
+    age = gets.chomp.to_i
+    puts 'Enter person name:'
+    name = gets.chomp
+    if type == 1
+      puts 'Has parent permission? [Yes/No]'
+      has_parent_permission = gets.chomp
+      create_student(age, name, has_parent_permission)
+    elsif type == 2
+      puts 'Enter specialization'
+      specialization = gets.chomp
+      create_teacher(age, specialization, name)
+    else
+      puts 'Invalid input'
+    end
   end
-end
 
   def create_student(age, name, parent_permission)
     student = Student.new(age, name: name, parent_permission: parent_permission)
@@ -85,7 +86,7 @@ end
     person = gets.chomp.to_i
     rental = Rental.new(date, books[book - 1], people[person - 1])
     @rentals << rental
-end
+  end
 
   def list_rentals()
     puts "\n"
