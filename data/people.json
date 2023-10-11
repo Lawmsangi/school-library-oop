@@ -1,0 +1,18 @@
+{
+  "People": [
+    {
+      "type": "Teacher",
+      "age": 40,
+      "name": "Dudu",
+      "id": 470,
+      "specialization": "Scientist"
+    },
+    {
+      "type": "Student",
+      "age": 19,
+      "name": "Meemaw",
+      "id": 612,
+      "parent_permission": true
+    }
+  ]
+}
