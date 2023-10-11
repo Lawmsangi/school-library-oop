@@ -18,8 +18,6 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-<!-- PROJECT DESCRIPTION -->
-
 # 📖 [school-library-oop] <a name="about-project"></a>
 
 **school-library-oop**  is a web library where users can add new students or teachers. Add new books. Save records of who borrowed a given book and when.
@@ -34,18 +32,15 @@ Ruby
 <summary>Ruby</summary>
 </details>
 
-<!-- Features -->
-
 ### Key Features <a name="key-features"></a>
 
 - **Add students**
 - **Add teachers**
 - **Add books**
 - **Create UI**
+- **Preserve Data**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -63,10 +58,7 @@ Ensure you have the following installed:
 - Clone this repository to your local machine:
 - git clone https://github.com/Lawmsangi/school-library-oop.git
 
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-<!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
 
@@ -76,18 +68,20 @@ Ensure you have the following installed:
 - Twitter: [@twitterhandle](https://twitter.com/mamy_22_zayn)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/lawmsangi-varte-baa429244/)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+👤 _Menendez NELSON_
 
-<!-- FUTURE FEATURES -->
+- GitHub: [@menendezon](https://github.com/menendezon)
+- Twitter: [@menendezon](https://twitter.com/menendezon)
+- LinkedIn: [MenendezON](https://linkedin.com/in/menendezon)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Preserve data**
+- ****
 - **Write unit tests**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -97,15 +91,11 @@ Feel free to check the [issues page](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
-
 ## ⭐️ Show your support <a name="support"></a>
 
 If you like this project, please give it a star, and if you would love to tell me ways to improve it, contact me on LinkedIn or Twitter. It will be a pleasure to hear from you.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
@@ -113,8 +103,6 @@ I would like to thank Microverse (microverse.org) for providing the resources an
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
 
 ## ❓ FAQ <a name="faq"></a>
 
@@ -127,8 +115,6 @@ You can download the latest version of Ruby from the official website: https://w
 Check out the Ruby documentation and tutorials at https://www.ruby-lang.org/en/documentation/ and https://www.ruby-lang.org/en/documentation/quickstart/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 

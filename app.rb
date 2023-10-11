@@ -3,14 +3,16 @@ require_relative 'rental'
 require_relative 'student'
 require_relative 'teacher'
 require_relative 'classroom'
+require_relative 'data_manager'
 
 class App
   attr_accessor :rentals, :books, :people
 
   def initialize()
-    @rentals = []
-    @books = []
-    @people = []
+    @data_manager = DataManager.new
+    @rentals = @data_manager.load_rentals(@books, @people)
+    @books = @data_manager.load_books
+    @people = @data_manager.load_people
   end
 
   def list_books
@@ -29,6 +31,11 @@ class App
     else
       @people.each_with_index do |person, i|
         puts "No: #{i + 1}, Name: #{person.name},age: #{person.age} ID: #{person.id}"
+        if person.instance_of?(Teacher)
+          puts "Specialization: #{person.specialization}"
+        elsif person.instance_of?(Student)
+          puts "Parent permission: #{person.parent_permission}"
+        end
       end
     end
   end
@@ -43,8 +50,8 @@ class App
     name = gets.chomp
     if type == 1
       puts 'Has parent permission? [Yes/No]'
-      has_parent_permission = gets.chomp
-      create_student(age, name, has_parent_permission)
+      parent_permission = gets.chomp
+      create_student(age, name, parent_permission)
     elsif type == 2
       puts 'Enter specialization'
       specialization = gets.chomp
@@ -54,14 +61,16 @@ class App
     end
   end
 
-  def create_student(age, name, parent_permission)
-    student = Student.new(age, name: name, parent_permission: parent_permission)
+  def create_student(age, name, has_parent_permission)
+    student = Student.new(age, name: name, parent_permission: has_parent_permission)
     @people << student
+    @data_manager.save_people(@people)
   end
 
   def create_teacher(age, specialization, name)
     teacher = Teacher.new(age, specialization, name: name)
     @people << teacher
+    @data_manager.save_people(@people)
   end
 
   def create_book()
@@ -72,6 +81,7 @@ class App
     author = gets.chomp
     book = Book.new(title, author)
     @books << book
+    @data_manager.save_books(@books)
   end
 
   def create_rental()
@@ -86,6 +96,7 @@ class App
     person = gets.chomp.to_i
     rental = Rental.new(date, books[book - 1], people[person - 1])
     @rentals << rental
+    @data_manager.save_rentals(@books, @people, @rentals)
   end
 
   def list_rentals()
