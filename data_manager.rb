@@ -3,10 +3,13 @@ require_relative 'book'
 require_relative 'person'
 require_relative 'student'
 require_relative 'teacher'
+require_relative 'rental'
+
 class DataManager
   def save_books(books)
-    File.open('data/books.json', 'w') do |file| data = { 
-      'Books' => books.map { |book| { 'title' => book.title, 'author' => book.author } } } file.write(JSON.pretty_generate(data))
+    File.open('data/books.json', 'w') do |file|
+      data = { 'Books' => books.map { |book| { 'title' => book.title, 'author' => book.author } } }
+      file.write(JSON.pretty_generate(data))
     end
   end
 

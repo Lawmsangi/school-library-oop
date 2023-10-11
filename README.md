@@ -38,6 +38,7 @@ Ruby
 - **Add teachers**
 - **Add books**
 - **Create UI**
+- **Preserve Data**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -77,7 +78,7 @@ Ensure you have the following installed:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Preserve data**
+- ****
 - **Write unit tests**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
